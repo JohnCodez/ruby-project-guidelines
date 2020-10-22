@@ -1,6 +1,7 @@
 require_relative '../config/environment'
-require_relative 'story_index.rb'
+require_relative 'methods.rb'
 
-# puts new_index("Walk left from house")
 
+# press start
+start
 
