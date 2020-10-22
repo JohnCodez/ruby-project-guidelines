@@ -1,4 +1,4 @@
-class CreateChoice < ActiveRecord::Migration[6.0]
+class CreateChoices < ActiveRecord::Migration[6.0]
   def change
     create_table :choices do |t|
       # char_id, story_id, choice

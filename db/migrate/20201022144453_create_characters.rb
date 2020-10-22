@@ -1,4 +1,4 @@
-class CreateCharacter < ActiveRecord::Migration[6.0]
+class CreateCharacters < ActiveRecord::Migration[6.0]
   def change
     create_table :characters do |t|
       #name, appearance, pronouns, user_id

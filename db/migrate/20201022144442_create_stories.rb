@@ -1,4 +1,4 @@
-class CreateStory < ActiveRecord::Migration[6.0]
+class CreateStories < ActiveRecord::Migration[6.0]
   def change
     create_table :stories do |t|
       #text, choice1, choice2 
