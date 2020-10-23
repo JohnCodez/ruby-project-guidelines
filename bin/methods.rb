@@ -1,10 +1,12 @@
 require_relative '../config/environment'
 require 'tty-prompt'
+require 'artii'
 @prompt = TTY::Prompt.new
+@a = Artii::Base.new
 
 def menu
     system('clear')
-    @prompt.say("Welcome!")
+    @prompt.say(@a.asciify("Welcome!"))
     options = {"Start" => 1, "Exit" => 2}
     action = @prompt.select("Choose" ,options)
     case action
@@ -97,7 +99,7 @@ def login
     username = nil
     while username == nil
         system('clear')
-        @prompt.say("User")
+        @prompt.say(@a.asciify("User"))
         options = {"Login" => 1, "Create" => 2, "Delete" => 3}
         action = @prompt.select("Choose" ,options)
         case action
@@ -122,6 +124,7 @@ def login
 end
 
 def character(user)
+    system('clear')
     name = @prompt.ask('Enter Character Name')
     emoji = @prompt.ask('Enter Character emoji')
     pro = @prompt.ask('Enter pronouns')
